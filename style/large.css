@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    #menu-button {
+        display: none; /* Hide hamburger menu icon */
+    }
+
+    nav ul {
+        display: flex; /* Horizontal nav for desktop */
+        justify-content: center;
+        background-color: #333;
+    }
+
+    nav li {
+        flex: 1;
+        text-align: center;
+    }
+}

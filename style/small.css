@@ -1,0 +1,43 @@
+/* Core Styling - Global Box Sizing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+}
+
+/* Mobile Nav Toggle */
+nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+nav ul.open {
+    display: block;
+}
+
+nav li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover, nav li a.active {
+    background-color: #555;
+}

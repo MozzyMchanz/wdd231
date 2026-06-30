@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231: Course Home Page</title>
+    <meta name="description" content="Course home page for WDD 231 - Web Frontend Development I.">
+    <meta name="author" content="Your Name">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style/small.css">
+    <link rel="stylesheet" href="style/larger.css">
+
+    <!-- Scripts (Deferred) -->
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="images/x.svg" alt="Site Logo" width="50" height="50">
+        <span>BWIRE MOSES</span>
+        <button id="menu-button" aria-label="Toggle Menu">&#9776;</button>
+    </header>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        
+        <section class="card">
+            <h2>About Me</h2>
+            <p>I am BWIRE MOSES, a student at WDD 231. I am passionate about web development and eager to learn more about frontend technologies. This course has provided me with valuable skills and knowledge that I look forward to applying in real-world projects.
+
+            </p> </section>
+
+        <section class="card">
+    <h2>Student Photo</h2>
+    <div class="photo-container">
+      <img src="images/profile.jpg" alt="Profile Photo" width="200" height="200">
+    </div>
+  </section>
+        <section class="card">
+            <h2>Web Certificate Courses</h2>
+            <div id="filter-buttons">
+                <button id="all-btn" class="btn active">All</button>
+                <button id="cse-btn" class="btn">CSE</button>
+                <button id="wdd-btn" class="btn">WDD</button>
+            </div>
+            
+            <div id="course-container"></div>
+            <p class="credits-display">The total credits for courses listed above is <span id="total-credits">0</span></p>
+        </section>
+        <section>
+            <div class="social-links">
+    <a href="https://github.com/mozzymchanz" target="_blank" rel="noopener">
+      <img src="images/github.png" alt="GitHub Profile">
+    </a>
+    <a href="https://linkedin.com/in/mozzymchanz" target="_blank" rel="noopener">
+      <img src="images/linkedin.svg" alt="LinkedIn Profile">
+    </a>
+    <a href="https://x.com/mozzymchanz" target="_blank" rel="noopener">
+      <img src="images/x.svg" alt="X (formerly Twitter) Profile">
+    </a>
+  </div>
+        </section>
+    </main>
+
+    <footer>
+        
+        <p>&copy; <span id="currentyear"></span> |  BWIRE MOSES |  Kampala/UGANDA </p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
