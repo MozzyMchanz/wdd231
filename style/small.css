@@ -63,6 +63,9 @@ main {
     margin-bottom: 1rem;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;  
+    text-align: center;
+    font-weight: bold;
 }
 
 #filter-buttons {
@@ -90,15 +93,6 @@ main {
     grid-template-columns: 1fr;
     gap: 0.75rem;
     margin-bottom: 1rem;
-}
-
-.course-card {
-    padding: 1rem;
-    background-color: #fdfdfd;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-align: center;
-    font-weight: bold;
 }
 
 /* Course state customization rules */
@@ -147,7 +141,7 @@ footer a {
 
 /* Footer & Social Media Styling */
 footer {
-   padding: 15px;
+    
   text-align: center;
   font-size: 0.9rem;
    background-color: #222;
