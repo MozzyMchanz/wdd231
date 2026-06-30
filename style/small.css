@@ -108,13 +108,7 @@ main {
     color: #155724;
 }
 
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
+
 
 footer a {
     color: #00bcd4;
@@ -153,11 +147,15 @@ footer a {
 
 /* Footer & Social Media Styling */
 footer {
-  background-color: #635f5f;
-  padding: 15px;
+   padding: 15px;
   text-align: center;
   font-size: 0.9rem;
+   background-color: #222;
+    color: white;
+     padding: 1rem;
+     ;
 }
+
 
 .social-links {
   display: flex;
