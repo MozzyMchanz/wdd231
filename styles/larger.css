@@ -1,0 +1,3 @@
+/* Compatibility file: older references to styles/larger.css */
+@import url("./large.css");
+
