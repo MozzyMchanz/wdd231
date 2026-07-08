@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Matooke Tech Solutions",
+    "address": "Plot 45, Kampala Road, Central Division",
+    "phone": "+256 414 123456",
+    "website": "https://matooketech.example.com",
+    "image": "matooke-tech.webp",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Rwenzori Coffee Roasters",
+    "address": "Block 12, Bukoto Street, Nakawa",
+    "phone": "+256 701 987654",
+    "website": "https://rwenzoriroasters.example.com",
+    "image": "rwenzori-coffee.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Kampala Artisan & Craft Guild",
+    "address": "Buganda Road Craft Market, Shop 4",
+    "phone": "+256 772 112233",
+    "website": "https://kampalacrafts.example.com",
+    "image": "kampala-crafts.webp",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Victoria Logistics Ltd",
+    "address": "Port Bell Road, Luzira",
+    "phone": "+256 312 555666",
+    "website": "https://viclogistics.example.com",
+    "image": "victoria-logistics.webp",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Nile Digital Marketing",
+    "address": "Acacia Avenue, Kololo",
+    "phone": "+256 752 445566",
+    "website": "https://niledigital.example.com",
+    "image": "nile-digital.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Kireka Brick & Construct",
+    "address": "Kireka Trading Centre, Jinja Road",
+    "phone": "+256 414 778899",
+    "website": "https://kirekabrick.example.com",
+    "image": "kireka-brick.webp",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Seven Hills Legal Advocates",
+    "address": "Lumumba Avenue, Nakasero",
+    "phone": "+256 393 221100",
+    "website": "https://sevenhillslegal.example.com",
+    "image": "seven-hills.webp",
+    "membershipLevel": 3
+  }
+]

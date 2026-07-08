@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #006633;
+    --accent-color: #FFCC00;
+    --text-primary: #1C1C1C;
+    --surface-light: #F9FBF9;
+    --surface-card: #FFFFFF;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--surface-light);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Wireframe Top Header Grid */
+header {
+    background-color: #E0E0E0;
+    color: #111;
+    padding: 1rem;
+    border-bottom: 2px solid #BDBDBD;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-container h1 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.header-actions button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+nav.show {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #CCC;
+}
+
+nav a.active {
+    background-color: #BDBDBD;
+}
+
+/* Wireframe Component Headings */
+.directory-header {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #FFF;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.directory-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.view-toggles {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.view-toggles button {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    background-color: #E0E0E0;
+    border: 1px solid #9E9E9E;
+    cursor: pointer;
+}
+
+.view-toggles button.active {
+    background-color: #9E9E9E;
+    color: white;
+}
+
+/* Base Dynamic Grid Cards */
+#directory-container {
+    padding: 1rem;
+}
+
+.member-card {
+    background-color: var(--surface-card);
+    border: 1px solid #BDBDBD;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.member-card img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    background-color: #F5F5F5;
+    padding: 0.5rem;
+    border: 1px solid #E0E0E0;
+    margin: 0 auto 1rem auto;
+}
+
+.member-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+.member-card p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+/* Wireframe Split Structural Footer */
+footer {
+    background-color: #E0E0E0;
+    color: #333;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-top: 2px solid #BDBDBD;
+}
+
+.footer-segment p {
+    margin: 0.25rem 0;
+}
+
+.company-name {
+    font-weight: bold;
+}
+
+.social-media-channels {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.social-media-channels a {
+    text-decoration: none;
+}
