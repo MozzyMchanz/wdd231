@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directory | Kampala Chamber of Commerce & Industry</title>
+  <meta name="description" content="Explore member businesses of the Kampala Chamber of Commerce & Industry. Toggle between grid and list views to find companies by name and tier." />
+  <meta name="author" content="BWIRE MOSES" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph Social Share Metadata (Facebook) -->
+  <meta property="og:title" content="Kampala Chamber of Commerce - Directory" />
+  <meta property="og:description" content="Browse chamber members in a responsive directory with grid/list toggle." />
+  <meta property="og:image" content="images/og-share-preview.jpg" />
+  <meta property="og:url" content="directory.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Standard CSS Hierarchy -->
+  <link rel="stylesheet" href="style/normalize.css" />
+  <link rel="stylesheet" href="style/small.css" />
+  <link rel="stylesheet" href="style/large.css" media="screen and (min-width: 768px)" />
+
+  <script defer src="script/directory.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <span class="logo-icon" aria-hidden="true">
+        <img src="images/twitter.svg" alt="Site Logo" width="50" height="50">
+      </span>
+      <h1>Kampala Chamber of Commerce</h1>
+    </div>
+
+    <div class="header-actions">
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+    </div>
+
+    <nav id="nav-menu" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="directory-header">
+      <h2>Chamber Directory</h2>
+      <div class="view-toggles" role="group" aria-label="Directory view toggle">
+        <button id="grid-btn" class="active" type="button">Grid</button>
+        <button id="list-btn" type="button">List</button>
+      </div>
+    </div>
+
+    <div id="directory-container" class="grid-view"></div>
+  </main>
+
+  <footer>
+    <div class="footer-segment company-details">
+      <p class="company-name">Kampala Chamber of Commerce</p>
+      <p>Plot 45, Kampala Road</p>
+      <p>Kampala, Central, Uganda</p>
+      <p>info@kampalachamber.org</p>
+      <p>(+256) 414-123456</p>
+    </div>
+
+    <div class="footer-segment social-media-channels" aria-label="Social media links">
+      <a href="https://github.com/mozzymchanz" target="_blank" rel="noopener">
+      <img src="images/github.png" alt="GitHub Profile">
+    </a>
+    <a href="https://linkedin.com/in/mozzymchanz" target="_blank" rel="noopener">
+      <img src="images/linkedin.svg" alt="LinkedIn Profile">
+    </a>
+    <a href="https://x.com/mozzymchanz" target="_blank" rel="noopener">
+      <img src="images/twitter.svg" alt="X (formerly Twitter) Profile">
+    </a></div>
+
+    <div class="footer-segment assignment-metadata">
+      <p>WDD231 Class Project</p>
+      <p>BWIRE MOSES</p>
+      <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>
+

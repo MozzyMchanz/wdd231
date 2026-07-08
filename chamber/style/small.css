@@ -16,16 +16,17 @@ body {
 
 /* Wireframe Top Header Grid */
 header {
-    background-color: #E0E0E0;
-    color: #111;
+    background-color: #003366;
+    color: whitesmoke;
     padding: 1rem;
-    border-bottom: 2px solid #BDBDBD;
+    border-bottom: 2px solid black;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    
 }
 
 .logo-container h1 {
@@ -143,8 +144,8 @@ nav a.active {
 
 /* Wireframe Split Structural Footer */
 footer {
-    background-color: #E0E0E0;
-    color: #333;
+    background-color: gray;
+    color: black;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
