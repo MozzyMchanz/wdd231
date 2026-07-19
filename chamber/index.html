@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="Chamber of Commerce home page featuring community events, weather updates, and member spotlights.">
+    <link rel="stylesheet" href="style/large.css">
+    <link rel="stylesheet" href="style/small.css"> <!-- Your existing CSS file -->
+    <script src="script/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Consistent Header and Wayfinding Navigation -->
+        <div class="logo-area">
+            <img src="images/twitter.svg" alt="Chamber Logo" width="100" height="100">
+            <h1>Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <!-- Future pages -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Overlaid CTA -->
+        <section class="hero-container">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/hero-small.webp">
+                <img src="images/hero-large.webp" alt="Beautiful view of our city center" class="hero-image" width="1200" height="600">
+            </picture>
+            <div class="cta-box">
+                <h2>Grow Your Business Today</h2>
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="events">
+            <h2>Current Events</h2>
+            <div class="event-card">
+                <h3>Annual Business Expo</h3>
+                <p>Date: Next Thursday at 6:00 PM</p>
+                <p>Join us for networking and keynote speakers from local industry leaders.</p>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-box">
+            <h2>Local Weather</h2>
+            <div id="current-weather">
+                <p>Loading current weather...</p>
+            </div>
+            <h3>3-Day Forecast</h3>
+            <div id="forecast">
+                <!-- Dynamically generated forecast -->
+            </div>
+        </section>
+
+        <!-- Company Spotlight Section -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container">
+                <!-- Dynamically generated with JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Chamber of Commerce | Your Name | WDD 231</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+</html>

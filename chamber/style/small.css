@@ -170,3 +170,17 @@ footer {
 .social-media-channels a {
     text-decoration: none;
 }
+.hero-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.cta-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6); /* High contrast backdrop for readability */
+    padding: 20px;
+    border-radius: 8px;
+}

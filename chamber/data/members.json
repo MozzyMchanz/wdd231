@@ -4,7 +4,7 @@
     "address": "Plot 45, Kampala Road, Central Division",
     "phone": "+256 414 123456",
     "website": "https://matooketech.example.com",
-    "image": "matooke-tech.webp",
+    "image": "linkedin.svg",
     "membershipLevel": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "Block 12, Bukoto Street, Nakawa",
     "phone": "+256 701 987654",
     "website": "https://rwenzoriroasters.example.com",
-    "image": "rwenzori-coffee.webp",
+    "image": "linkedin.svg",
     "membershipLevel": 2
   },
   {
@@ -20,7 +20,7 @@
     "address": "Buganda Road Craft Market, Shop 4",
     "phone": "+256 772 112233",
     "website": "https://kampalacrafts.example.com",
-    "image": "kampala-crafts.webp",
+    "image": "linkedin.svg",
     "membershipLevel": 1
   },
   {
@@ -28,7 +28,7 @@
     "address": "Port Bell Road, Luzira",
     "phone": "+256 312 555666",
     "website": "https://viclogistics.example.com",
-    "image": "victoria-logistics.webp",
+    "image": "linkedin.svg",
     "membershipLevel": 3
   },
   {
@@ -36,7 +36,7 @@
     "address": "Acacia Avenue, Kololo",
     "phone": "+256 752 445566",
     "website": "https://niledigital.example.com",
-    "image": "nile-digital.webp",
+    "image": "linkedin.svg",
     "membershipLevel": 2
   },
   {
@@ -44,7 +44,7 @@
     "address": "Kireka Trading Centre, Jinja Road",
     "phone": "+256 414 778899",
     "website": "https://kirekabrick.example.com",
-    "image": "kireka-brick.webp",
+    "image": "linkedin.svg",
     "membershipLevel": 1
   },
   {
@@ -52,7 +52,7 @@
     "address": "Lumumba Avenue, Nakasero",
     "phone": "+256 393 221100",
     "website": "https://sevenhillslegal.example.com",
-    "image": "seven-hills.webp",
+    "image": "linkedin.svg",
     "membershipLevel": 3
   }
 ]
