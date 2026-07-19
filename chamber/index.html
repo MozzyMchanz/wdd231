@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Home</title>
-    <meta name="description" content="Chamber of Commerce home page featuring community events, weather updates, and member spotlights.">
+    <title>Kampala Chamber of Commerce - Home</title>
+    <meta name="author" content="BWIRE MOSES">
+    <meta name="description" content="Kampala Chamber of Commerce home page with events, local weather, and member spotlights.">
+
+    <!-- Open Graph (social sharing) -->
+    <meta property="og:title" content="Kampala Chamber of Commerce - Home" />
+    <meta property="og:description" content="Kampala Chamber of Commerce home page with events, local weather, and member spotlights." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/chamber/index.html" />
+    <meta property="og:image" content="https://example.com/chamber/images/hero-large.webp" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="style/large.css">
     <link rel="stylesheet" href="style/small.css"> <!-- Your existing CSS file -->
     <script src="script/main.js" defer></script>
@@ -31,11 +43,11 @@
         <section class="hero-container">
             <picture>
                 <source media="(max-width: 600px)" srcset="images/hero-small.webp">
-                <img src="images/hero-large.webp" alt="Beautiful view of our city center" class="hero-image" width="1200" height="600">
+                <img src="images/hero-large.webp" alt="Beautiful view of Kampala city center" class="hero-image" width="1200" height="600" loading="eager">
             </picture>
             <div class="cta-box">
                 <h2>Grow Your Business Today</h2>
-                <a href="join.html" class="cta-btn">Join the Chamber</a>
+                <a href="join.html" class="cta-btn" aria-label="Join the Kampala Chamber of Commerce">Join the Chamber</a>
             </div>
         </section>
 
