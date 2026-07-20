@@ -175,12 +175,16 @@ footer {
     text-align: center;
     color: white;
 }
-.cta-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6); /* High contrast backdrop for readability */
-    padding: 20px;
-    border-radius: 8px;
+.cta-box a.cta-btn {
+    color: #ffffff;             /* High contrast text */
+    background-color: #004b87;  /* Dark accessible background button */
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-box a.cta-btn:hover {
+    background-color: #003366;
+    color: #ffcc00;
 }
