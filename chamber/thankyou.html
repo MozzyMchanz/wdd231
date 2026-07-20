@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Membership Application Received</title>
+  <meta name="description" content="Confirmation page for chamber membership application.">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <script src="js/thankyou.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <span class="logo-icon" aria-hidden="true">
+        <img src="images/twitter.svg" alt="Site Logo" width="50" height="50">
+      </span>
+      <h1>Kampala Chamber of Commerce</h1>
+    </div>
+
+    <div class="header-actions">
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+    </div>
+
+    <nav id="nav-menu" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thankyou-container">
+    <h2>Thank You for Joining!</h2>
+    <p>We have received your application. Below are the details you submitted:</p>
+
+    <div class="submitted-data" id="results">
+      <!-- Data injected via thankyou.js -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-segment company-details">
+      <p class="company-name">Kampala Chamber of Commerce</p>
+      <p>Plot 45, Kampala Road</p>
+      <p>Kampala, Central, Uganda</p>
+      <p>info@kampalachamber.org</p>
+      <p>(+256) 414-123456</p>
+    </div>
+
+    <div class="footer-segment social-media-channels" aria-label="Social media links">
+      <a href="https://github.com/mozzymchanz" target="_blank" rel="noopener" aria-label="GitHub">
+        <img src="images/github.png" alt="GitHub Profile" />
+      </a>
+      <a href="https://linkedin.com/in/mozzymchanz" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn Profile" />
+      </a>
+      <a href="https://x.com/mozzymchanz" target="_blank" rel="noopener" aria-label="X (formerly Twitter)">
+        <img src="images/twitter.svg" alt="X (formerly Twitter) Profile" />
+      </a>
+    </div>
+
+
+    <div class="footer-segment assignment-metadata">
+      <p>WDD231 Class Project</p>
+      <p>BWIRE MOSES</p>
+      <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>

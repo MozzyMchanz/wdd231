@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce | Join Us</title>
+  <meta name="description" content="Apply to join the Chamber of Commerce and discover membership benefits.">
+  
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph (social sharing) -->
+    <meta property="og:title" content="Kampala Chamber of Commerce - Home">
+    <meta property="og:description" content="Kampala Chamber of Commerce home page with events, local weather, and member spotlights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/chamber/images/hero-large.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+
+
+
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/join.css">
+
+  <script src="scripts/join.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+   </head>
+<body>
+ <header>
+    <div class="logo-container">
+      <span class="logo-icon" aria-hidden="true">
+        <img src="images/twitter.svg" alt="Site Logo" width="50" height="50">
+      </span>
+      <h1>Kampala Chamber of Commerce</h1>
+    </div>
+
+    <div class="header-actions">
+      <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+    </div>
+
+    <nav id="nav-menu" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join-container">
+    <h2>Membership Application</h2>
+    
+    <div class="form-layout">
+      <!-- Registration Form -->
+      <form method="get" action="thankyou.html" class="join-form">
+        <label for="fname">First Name*
+          <input type="text" id="fname" name="fname" required title="First Name" autocomplete="given-name">
+        </label>
+
+        <label for="lname">Last Name*
+          <input type="text" id="lname" name="lname" required title="Last Name" autocomplete="family-name">
+        </label>
+
+        <label for="org-title">Organizational Title
+          <input 
+            type="text" 
+            id="org-title" 
+            name="org-title" 
+            title="Title within organization (minimum 7 characters: letters, spaces, and hyphens only)" 
+            autocomplete="organization-title" 
+            pattern="[A-Za-z\s\-]{7,}"
+          >
+        </label>
+
+        <label for="email">Email Address*
+          <input type="email" id="email" name="email" required title="Email Address" autocomplete="email" placeholder="john.doe@example.com">
+        </label>
+
+        <label for="phone">Mobile Phone*
+          <input type="tel" id="phone" name="phone" required title="Mobile Phone Number" autocomplete="tel">
+        </label>
+
+        <label for="org-name">Business/Organization Name*
+          <input type="text" id="org-name" name="org-name" required title="Organization Name" autocomplete="organization">
+        </label>
+
+        <fieldset>
+          <legend>Membership Level*</legend>
+          <label class="radio-label">
+            <input type="radio" name="membership" value="np" required> NP Membership (Non-Profit - Free)
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="membership" value="bronze"> Bronze Membership
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="membership" value="silver"> Silver Membership
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="membership" value="gold"> Gold Membership
+          </label>
+        </fieldset>
+
+        <label for="description">Organization Description
+          <textarea id="description" name="description" title="Organization Description"></textarea>
+        </label>
+
+        <!-- Hidden Timestamp Input -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <input type="submit" value="Complete Registration" class="submit-btn">
+      </form>
+
+      <!-- Membership Cards Section -->
+      <section class="cards-container" aria-label="Membership Levels">
+        <div class="card card-animate">
+          <h3>NP Membership</h3>
+          <p>Ideal for non-profit organizations seeking community involvement.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-np">Learn More</button>
+        </div>
+
+        <div class="card card-animate">
+          <h3>Bronze Membership</h3>
+          <p>Entry-level membership for small businesses starting out.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-bronze">Learn More</button>
+        </div>
+
+        <div class="card card-animate">
+          <h3>Silver Membership</h3>
+          <p>Great value offering event discounts and regular exposure.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-silver">Learn More</button>
+        </div>
+
+        <div class="card card-animate">
+          <h3>Gold Membership</h3>
+          <p>Premium benefits, full advertising, and homepage spotlights.</p>
+          <button type="button" class="modal-trigger" data-modal="modal-gold">Learn More</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modals -->
+    <dialog id="modal-np" class="modal">
+      <div class="modal-content">
+        <h3>NP Membership Benefits</h3>
+        <ul>
+          <li>Free membership for registered non-profits</li>
+          <li>Access to general networking events</li>
+          <li>Listing in the Chamber directory</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-bronze" class="modal">
+      <div class="modal-content">
+        <h3>Bronze Membership Benefits</h3>
+        <ul>
+          <li>All NP benefits included</li>
+          <li>10% discount on special events</li>
+          <li>Access to training sessions</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-silver" class="modal">
+      <div class="modal-content">
+        <h3>Silver Membership Benefits</h3>
+        <ul>
+          <li>All Bronze benefits included</li>
+          <li>20% discount on special events</li>
+          <li>Quarterly social media shoutouts</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+
+    <dialog id="modal-gold" class="modal">
+      <div class="modal-content">
+        <h3>Gold Membership Benefits</h3>
+        <ul>
+          <li>All Silver benefits included</li>
+          <li>Homepage spotlight placement</li>
+          <li>Free access to all training seminars</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+      </div>
+    </dialog>
+  </main>
+
+  
+    <footer>
+    <div class="footer-segment company-details">
+      <p class="company-name">Kampala Chamber of Commerce</p>
+      <p>Plot 45, Kampala Road</p>
+      <p>Kampala, Central, Uganda</p>
+      <p>info@kampalachamber.org</p>
+      <p>(+256) 414-123456</p>
+    </div>
+
+    <div class="footer-segment social-media-channels" aria-label="Social media links">
+      <a href="https://github.com/mozzymchanz" target="_blank" rel="noopener" aria-label="GitHub">
+        <img src="images/github.png" alt="GitHub Profile" />
+      </a>
+      <a href="https://linkedin.com/in/mozzymchanz" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn Profile" />
+      </a>
+      <a href="https://x.com/mozzymchanz" target="_blank" rel="noopener" aria-label="X (formerly Twitter)">
+        <img src="images/twitter.svg" alt="X (formerly Twitter) Profile" />
+      </a>
+    </div>
+
+
+    <div class="footer-segment assignment-metadata">
+      <p>WDD231 Class Project</p>
+      <p>BWIRE MOSES</p>
+      <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>
