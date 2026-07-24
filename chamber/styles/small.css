@@ -29,9 +29,9 @@ header {
     gap: 0.75rem;
 }
 
-.logo-container h1 {
+.site-title {
     font-size: 1.25rem;
-    margin: 0;
+    font-weight: 700;
     color: #ffffff;
 }
 
@@ -80,11 +80,19 @@ nav a.active {
     color: var(--accent-color);
 }
 
-/* Main Content */
+/* Main */
 main {
     padding: 1rem;
 }
 
+main h1 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0.5rem 0 1.5rem;
+}
+
+/* Hero & CTA */
 .hero-container {
     position: relative;
     text-align: center;
@@ -94,6 +102,7 @@ main {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 6px;
 }
 
 .cta-box {
@@ -128,7 +137,7 @@ main {
     background-color: #e6b800;
 }
 
-/* Content Blocks */
+/* Sections */
 .events,
 .weather-box,
 .spotlights {
