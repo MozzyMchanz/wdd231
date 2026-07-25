@@ -7,38 +7,55 @@
     <meta name="author" content="BWIRE MOSES">
     <meta name="description" content="Kampala Chamber of Commerce home page with events, local weather, and member spotlights.">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Open Graph (social sharing) -->
-    <meta property="og:title" content="Kampala Chamber of Commerce - Home" />
-    <meta property="og:description" content="Kampala Chamber of Commerce home page with events, local weather, and member spotlights." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com/chamber/index.html" />
-    <meta property="og:image" content="https://example.com/chamber/images/hero-large.webp" />
+    <meta property="og:title" content="Kampala Chamber of Commerce - Home">
+    <meta property="og:description" content="Kampala Chamber of Commerce home page with events, local weather, and member spotlights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/chamber/index.html">
+    <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/chamber/images/hero-large.webp">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico">
 
-    <link rel="stylesheet" href="style/large.css">
-    <link rel="stylesheet" href="style/small.css"> <!-- Your existing CSS file -->
-    <script src="script/main.js" defer></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
-        <!-- Consistent Header and Wayfinding Navigation -->
-        <div class="logo-area">
-            <img src="images/twitter.svg" alt="Chamber Logo" width="100" height="100">
-            <h1>Chamber of Commerce</h1>
+        <div class="logo-container">
+            <span class="logo-icon" aria-hidden="true">
+                <img src="images/twitter.svg" alt="Kampala Chamber Logo" width="50" height="50">
+            </span>
+            <span class="site-title">Kampala Chamber of Commerce</span>
         </div>
-        <nav>
-            <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-            <ul id="nav-menu">
+
+        <div class="header-actions">
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+        </div>
+
+        <nav id="nav-menu" aria-label="Primary">
+            <ul>
                 <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <!-- Future pages -->
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <h1>Kampala Chamber of Commerce</h1>
+
         <!-- Hero Section with Overlaid CTA -->
         <section class="hero-container">
             <picture>
@@ -83,8 +100,32 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="current-year"></span> | Chamber of Commerce | Your Name | WDD 231</p>
-        <p id="last-modified"></p>
+        <div class="footer-segment company-details">
+            <p class="company-name">Kampala Chamber of Commerce</p>
+            <p>Plot 45, Kampala Road</p>
+            <p>Kampala, Central, Uganda</p>
+            <p>info@kampalachamber.org</p>
+            <p>(+256) 414-123456</p>
+        </div>
+
+        <div class="footer-segment social-media-channels" aria-label="Social media links">
+            <a href="https://github.com/mozzymchanz" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub Profile" width="30" height="30">
+            </a>
+            <a href="https://linkedin.com/in/mozzymchanz" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn Profile" width="30" height="30">
+            </a>
+            <a href="https://x.com/mozzymchanz" target="_blank" rel="noopener" aria-label="X (formerly Twitter)">
+                <img src="images/twitter.svg" alt="X (formerly Twitter) Profile" width="30" height="30">
+            </a>
+        </div>
+
+        <div class="footer-segment assignment-metadata">
+            <p>WDD231 Class Project</p>
+            <p>BWIRE MOSES</p>
+            <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 </body>
 </html>
