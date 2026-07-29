@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampala Chamber of Commerce - Join Us</title>
+    <meta name="description" content="Join the Kampala Chamber of Commerce to connect with local businesses, access resources, and grow your organization.">
+    <meta name="author" content="Bwire Moses">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Join the Kampala Chamber of Commerce">
+    <meta property="og:description" content="Become a member of the Kampala Chamber of Commerce to access exclusive benefits, networking, and growth opportunities.">
+    <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/chamber/images/hero-large.webp">
+    <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/chamber/join.html">
+    
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/twitter.svg" alt="Kampala Chamber Logo" width="50" height="50">
+        <h1>Kampala Chamber of Commerce</h1>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h1>Join the Kampala Chamber of Commerce</h1>
+
+        <div class="join-container">
+            <!-- Form Section -->
+            <section class="form-section">
+                <h2>Membership Application</h2>
+                <form method="get" action="thankyou.html">
+                    <label for="fname">First Name:
+                        <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+                    </label>
+
+                    <label for="lname">Last Name:
+                        <input type="text" id="lname" name="lname" autocomplete="family-name" required>
+                    </label>
+
+                    <label for="title">Organizational Title:
+                        <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Minimum 7 characters, spaces, and hyphens only." required>
+                    </label>
+
+                    <label for="email">Email Address:
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" autocomplete="email" required>
+                    </label>
+
+                    <label for="phone">Mobile Phone:
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                    </label>
+
+                    <label for="organization">Business / Organization Name:
+                        <input type="text" id="organization" name="organization" autocomplete="organization" required>
+                    </label>
+
+                    <label for="membership">Membership Level:
+                        <select id="membership" name="membership" required>
+                            <option value="" disabled selected>Select a level...</option>
+                            <option value="np">NP Membership (Free)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label for="description">Organization Description:
+                        <textarea id="description" name="description" rows="4"></textarea>
+                    </label>
+
+                    <!-- Hidden Timestamp Field -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <button type="submit" class="submit-btn">Complete Application</button>
+                </form>
+            </section>
+
+            <!-- Membership Cards Section -->
+            <section class="cards-section">
+                <h2>Membership Benefits</h2>
+                
+                <div class="membership-cards">
+                    <div class="card np-card">
+                        <h3>NP Membership</h3>
+                        <p>For non-profit organizations seeking community involvement.</p>
+                        <button class="open-modal" data-modal="modal-np">Learn More</button>
+                    </div>
+
+                    <div class="card bronze-card">
+                        <h3>Bronze Membership</h3>
+                        <p>Great for small businesses and entry-level networking.</p>
+                        <button class="open-modal" data-modal="modal-bronze">Learn More</button>
+                    </div>
+
+                    <div class="card silver-card">
+                        <h3>Silver Membership</h3>
+                        <p>Ideal for growing businesses needing advertising discounts.</p>
+                        <button class="open-modal" data-modal="modal-silver">Learn More</button>
+                    </div>
+
+                    <div class="card gold-card">
+                        <h3>Gold Membership</h3>
+                        <p>Maximum visibility, premium event access, and home page spotlights.</p>
+                        <button class="open-modal" data-modal="modal-gold">Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modals -->
+        <dialog id="modal-np">
+            <div class="modal-content">
+                <h3>NP Membership Benefits</h3>
+                <p>Free membership for registered non-profit organizations.</p>
+                <ul>
+                    <li>Directory Listing</li>
+                    <li>Access to Community Events</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <div class="modal-content">
+                <h3>Bronze Membership Benefits</h3>
+                <p>Essential benefits for local small businesses.</p>
+                <ul>
+                    <li>Standard Directory Listing</li>
+                    <li>Invitation to Monthly Networking Lunches</li>
+                    <li>10% Discount on Event Tickets</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <div class="modal-content">
+                <h3>Silver Membership Benefits</h3>
+                <p>Expanded opportunities for growing companies.</p>
+                <ul>
+                    <li>Enhanced Directory Listing with Logo</li>
+                    <li>Training & Workshop Discounts</li>
+                    <li>Quarterly Social Media Spotlights</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <div class="modal-content">
+                <h3>Gold Membership Benefits</h3>
+                <p>The ultimate tier for maximum business impact.</p>
+                <ul>
+                    <li>Featured Directory Listing & Home Page Spotlight</li>
+                    <li>Free Access to All Chamber Seminars</li>
+                    <li>VIP Event Seating & Exclusive Networking</li>
+                </ul>
+                <button class="close-modal">Close</button>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Kampala Chamber of Commerce | Bwire Moses | WDD 231</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
