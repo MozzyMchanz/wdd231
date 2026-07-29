@@ -31,7 +31,7 @@
         <h1>Kampala Chamber of Commerce</h1>
         <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
         <nav>
-            <ul>
+            <ul id="primary-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -49,31 +49,31 @@
                 <h2>Membership Application</h2>
                 <form method="get" action="thankyou.html">
                     <label for="fname">First Name:
-                        <input type="text" id="fname" name="fname" autocomplete="given-name" required>
+                        <input type="text" id="fname" name="fname" autocomplete="given-name" title="Please enter your first name." required>
                     </label>
 
                     <label for="lname">Last Name:
-                        <input type="text" id="lname" name="lname" autocomplete="family-name" required>
+                        <input type="text" id="lname" name="lname" autocomplete="family-name" title="Please enter your last name." required>
                     </label>
 
                     <label for="title">Organizational Title:
-                        <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Minimum 7 characters, spaces, and hyphens only." required>
+                        <input type="text" id="title" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="Minimum 7 characters (letters, spaces, and hyphens only)." required>
                     </label>
 
                     <label for="email">Email Address:
-                        <input type="email" id="email" name="email" placeholder="example@domain.com" autocomplete="email" required>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" autocomplete="email" title="Please enter a valid email address." required>
                     </label>
 
                     <label for="phone">Mobile Phone:
-                        <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" title="Please enter your mobile phone number." required>
                     </label>
 
                     <label for="organization">Business / Organization Name:
-                        <input type="text" id="organization" name="organization" autocomplete="organization" required>
+                        <input type="text" id="organization" name="organization" autocomplete="organization" title="Please enter your business or organization name." required>
                     </label>
 
                     <label for="membership">Membership Level:
-                        <select id="membership" name="membership" required>
+                        <select id="membership" name="membership" title="Select a membership level." required>
                             <option value="" disabled selected>Select a level...</option>
                             <option value="np">NP Membership (Free)</option>
                             <option value="bronze">Bronze Membership</option>
@@ -83,7 +83,7 @@
                     </label>
 
                     <label for="description">Organization Description:
-                        <textarea id="description" name="description" rows="4"></textarea>
+                        <textarea id="description" name="description" rows="4" title="Brief description of your organization."></textarea>
                     </label>
 
                     <!-- Hidden Timestamp Field -->

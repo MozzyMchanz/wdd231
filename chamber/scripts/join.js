@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Populate hidden timestamp field
+    // Hidden timestamp population
     const timestampInput = document.getElementById("timestamp");
     if (timestampInput) {
         timestampInput.value = new Date().toISOString();
     }
 
-    // Modal behavior
+    // Modal dialogue handlers
     const openButtons = document.querySelectorAll(".open-modal");
     const closeButtons = document.querySelectorAll(".close-modal");
 

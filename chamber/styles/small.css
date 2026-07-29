@@ -6,7 +6,7 @@
     --surface-card: #ffffff;
 }
 
-/* Consolidated Body Styling */
+/* Base Body Styling */
 body {
     font-family: 'Roboto', system-ui, sans-serif;
     background-color: var(--surface-light);
@@ -15,7 +15,7 @@ body {
     padding: 0;
 }
 
-/* Consolidated Header Styling */
+/* Header Styling */
 header {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -38,13 +38,13 @@ header h1 {
     cursor: pointer;
 }
 
-/* Consolidated Nav & Links (Fixed WCAG AA Contrast Ratio) */
+/* Navigation Links (WCAG AA Compliant High Contrast) */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: none;
     gap: 0.5rem;
 }
 
@@ -64,14 +64,14 @@ nav a:hover {
     color: #000000;
 }
 
-/* Consolidated Main Area */
+/* Main Container */
 main {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Application Form Layout & Validation Styling */
+/* Join Container & Form Layout */
 .join-container {
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@ form select:required {
     background-color: #002244;
 }
 
-/* Membership Cards & Initial Page-Load Animation */
+/* Cards Section & Animation */
 .membership-cards {
     display: grid;
     grid-template-columns: 1fr;
@@ -140,7 +140,6 @@ form select:required {
     border-radius: 8px;
     padding: 1.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    /* Keyframe animation on load (not hover-activated) */
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
@@ -175,7 +174,7 @@ form select:required {
     color: #000000;
 }
 
-/* Dialog / Modal Window Styling */
+/* Modals */
 dialog {
     border: none;
     border-radius: 8px;
@@ -204,7 +203,7 @@ dialog::backdrop {
     cursor: pointer;
 }
 
-/* Consolidated Footer Styling */
+/* Footer Styling */
 footer {
     background-color: var(--primary-color);
     color: #ffffff;
