@@ -1,0 +1,176 @@
+/* ==========================================================================
+   CSS Variables & Color Schema
+   ========================================================================== */
+:root {
+  --primary-color: #1E3A8A;   /* Deep Slate Blue - Headers, Nav, Primary CTAs */
+  --secondary-color: #0D9488; /* Teal Accent - Subheaders, Borders, Hovers */
+  --bg-color: #F8FAFC;        /* Light Gray/Off-White - Main Page Background */
+  --card-bg: #FFFFFF;         /* White Container Background */
+  --text-color: #1F2937;      /* Charcoal - Main Text Content */
+  --code-bg: #1E293B;        /* Dark Slate - Wireframe Box Background */
+  --code-text: #38BDF8;      /* Sky Blue - Wireframe Code Text */
+  
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* ==========================================================================
+   Base & Reset Styles
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+header {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #E2E8F0;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   Main Content & Section Cards
+   ========================================================================== */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 1.75rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid var(--secondary-color);
+}
+
+/* Typography Hierarchy */
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-color);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  color: var(--secondary-color);
+  font-size: 1.15rem;
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+strong {
+  color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Color Palette Swatches Display
+   ========================================================================== */
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.swatch {
+  padding: 1.25rem 1rem;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.swatch-primary {
+  background-color: #1E3A8A;
+}
+
+.swatch-secondary {
+  background-color: #0D9488;
+}
+
+.swatch-bg {
+  background-color: #F8FAFC;
+  color: #1F2937;
+  border: 1px solid #CBD5E1;
+}
+
+.swatch-text {
+  background-color: #1F2937;
+}
+
+/* ==========================================================================
+   Wireframes Block Formatting
+   ========================================================================== */
+pre {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  padding: 1.25rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: #64748B;
+  border-top: 1px solid #E2E8F0;
+}
