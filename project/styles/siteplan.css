@@ -2,17 +2,16 @@
    CSS Variables & Color Schema
    ========================================================================== */
 :root {
-  --primary-color: #1E3A8A;   /* Deep Slate Blue - Headers, Nav, Primary CTAs */
-  --secondary-color: #0D9488; /* Teal Accent - Subheaders, Borders, Hovers */
-  --bg-color: #F8FAFC;        /* Light Gray/Off-White - Main Page Background */
+  --primary-color: #1E3A8A;   /* Deep Slate Blue */
+  --secondary-color: #0D9488; /* Teal Accent */
+  --bg-color: #F8FAFC;        /* Light Gray/Off-White */
   --card-bg: #FFFFFF;         /* White Container Background */
-  --text-color: #1F2937;      /* Charcoal - Main Text Content */
-  --code-bg: #1E293B;        /* Dark Slate - Wireframe Box Background */
-  --code-text: #38BDF8;      /* Sky Blue - Wireframe Code Text */
+  --text-color: #1F2937;      /* Charcoal Text */
+  --code-bg: #1E293B;        /* Dark Slate */
+  --code-text: #38BDF8;      /* Sky Blue */
   
-  /* System Font Fallback Strategy for High Availability & Performance */
-  --heading-font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --body-font: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
 }
 
 /* ==========================================================================
@@ -33,7 +32,7 @@ body {
 }
 
 /* ==========================================================================
-   Header & Navigation
+   Header Layout
    ========================================================================== */
 header {
   background-color: var(--primary-color);
@@ -59,7 +58,7 @@ header p {
 }
 
 /* ==========================================================================
-   Main Content & Section Cards
+   Main Content
    ========================================================================== */
 main {
   max-width: 960px;
@@ -76,7 +75,6 @@ section {
   border-left: 6px solid var(--secondary-color);
 }
 
-/* Typography Hierarchy */
 h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
@@ -111,7 +109,7 @@ strong {
 }
 
 /* ==========================================================================
-   Color Palette Swatches Display
+   Color Palette Swatches
    ========================================================================== */
 .color-palette {
   display: grid;
@@ -149,7 +147,7 @@ strong {
 }
 
 /* ==========================================================================
-   Wireframes Block Formatting
+   Wireframe Block Formatting
    ========================================================================== */
 pre {
   background-color: var(--code-bg);
