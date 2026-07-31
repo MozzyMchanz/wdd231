@@ -10,8 +10,9 @@
   --code-bg: #1E293B;        /* Dark Slate - Wireframe Box Background */
   --code-text: #38BDF8;      /* Sky Blue - Wireframe Code Text */
   
-  --heading-font: 'Montserrat', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
+  /* System Font Fallback Strategy for High Availability & Performance */
+  --heading-font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --body-font: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* ==========================================================================
