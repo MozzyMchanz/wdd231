@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Visitor Message Banner
+   ========================================================================== */
+.visitor-banner {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Named Grid Areas Implementation for Small / Medium / Large Views
+   ========================================================================== */
+
+.discover-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Base Card Styling */
+.discover-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.discover-card h2 {
+  font-size: 1.25rem;
+  color: #1E3A8A;
+  margin-bottom: 0.5rem;
+}
+
+.discover-card figure {
+  margin: 0 0 0.75rem 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.discover-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.88rem;
+  color: #0D9488;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.discover-card p {
+  font-size: 0.95rem;
+  color: #334155;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.discover-card button {
+  background-color: #0D9488;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: start;
+}
+
+/* --------------------------------------------------------------------------
+   Small Screens (320px – 640px): Single Column named area layout
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+  .discover-grid {
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Medium Screens (641px – 1024px): 2 Column named area layout
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+
+  /* Image Hover Effect applied ONLY on medium and larger views */
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Large Screens (1025px+): 3 Column named area layout
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 .";
+  }
+
+  /* Image Hover Effect applied ONLY on medium and larger views */
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+/* Assigning Area Names */
+.card-1 { grid-area: card1; }
+.card-2 { grid-area: card2; }
+.card-3 { grid-area: card3; }
+.card-4 { grid-area: card4; }
+.card-5 { grid-area: card5; }
+.card-6 { grid-area: card6; }
+.card-7 { grid-area: card7; }
+.card-8 { grid-area: card8; }

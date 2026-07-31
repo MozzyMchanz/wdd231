@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber Discover | Regional Highlights</title>
+  <meta name="description" content="Discover key attractions, demographics, and points of interest in our chamber of commerce area.">
+  <meta name="author" content="Mozzy Mchanz">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Chamber Discover Page">
+  <meta property="og:description" content="Explore top locations, historical landmarks, and culture in our community.">
+  <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/chamber/images/hero-discover.jpg">
+  <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/chamber/discover.html">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/discover.css">
+
+  <!-- JS Module Script -->
+  <script type="module" src="scripts/discover.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <img src="images/logo.webp" alt="Chamber of Commerce Logo" width="80" height="80">
+      <h1>Chamber of Commerce</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Visitor Message Container (Populated via localStorage JS) -->
+    <aside id="visitor-message" class="visitor-banner" aria-live="polite">
+      <p id="visitor-text">Loading visit information...</p>
+    </aside>
+
+    <section class="discover-hero">
+      <h2>Discover Our Community</h2>
+      <p>Explore the local culture, scenic landmarks, and key community destinations below.</p>
+    </section>
+
+    <!-- Grid Container using named grid areas in CSS -->
+    <div id="discover-grid" class="discover-grid">
+      <!-- 8 Cards dynamically rendered via JS Module -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Chamber of Commerce | WDD 231</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
