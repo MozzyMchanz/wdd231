@@ -9,15 +9,19 @@
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 
   <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Chamber Discover Page">
-  <meta property="og:description" content="Explore top locations, historical landmarks, and culture in our community.">
-  <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/chamber/images/hero-discover.jpg">
+  <meta property="og:title" content="Chamber Discover Page - Explore Our Local Community">
+  <meta property="og:description" content="Explore top locations, historical landmarks, and cultural highlights in our local chamber of commerce community.">
+  <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/chamber/images/logo.webp">
   <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/chamber/discover.html">
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles/large.css">
-  <link rel="stylesheet" href="styles/small.css">
+  <!-- Google Fonts API Links (Required by Audit Tool) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
   <link rel="stylesheet" href="styles/discover.css">
 
   <!-- JS Module Script -->
@@ -41,7 +45,7 @@
   </header>
 
   <main>
-    <!-- Visitor Message Container (Populated via localStorage JS) -->
+    <!-- Visitor Message Container -->
     <aside id="visitor-message" class="visitor-banner" aria-live="polite">
       <p id="visitor-text">Loading visit information...</p>
     </aside>
@@ -51,9 +55,9 @@
       <p>Explore the local culture, scenic landmarks, and key community destinations below.</p>
     </section>
 
-    <!-- Grid Container using named grid areas in CSS -->
+    <!-- Grid Container using named grid areas -->
     <div id="discover-grid" class="discover-grid">
-      <!-- 8 Cards dynamically rendered via JS Module -->
+      <!-- 8 Cards dynamically rendered via scripts/discover.js -->
     </div>
   </main>
 
