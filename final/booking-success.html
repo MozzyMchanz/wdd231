@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexoth Physiotherapy &amp; Wellness Portal | Booking Confirmed</title>
+  <meta name="description" content="Thank you for booking an appointment with Nexoth Physiotherapy.">
+  <meta name="author" content="BWIRE MOSES">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Nexoth Physiotherapy | Booking Confirmed">
+  <meta property="og:description" content="Your appointment request has been received.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/final/booking-success.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../project/images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- Scripts -->
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/booking.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark" aria-hidden="true">N</span>
+        <span class="site-title">Nexoth Physiotherapy</span>
+      </div>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
+      <nav id="nav-menu" class="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book Appointment</a></li>
+          <li><a href="attributions.html">Attributions</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero success-hero">
+      <span class="success-icon" aria-hidden="true">✅</span>
+      <h1>Appointment Request Received!</h1>
+      <p>Thank you for choosing Nexoth Physiotherapy. Our care team will contact you shortly to confirm your visit.</p>
+    </section>
+
+    <section class="section">
+      <h2>Your Booking Summary</h2>
+      <div id="booking-summary" class="booking-summary">
+        <!-- Populated dynamically from URL query parameters -->
+      </div>
+      <div class="section-actions">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="services.html" class="btn btn-secondary">Browse Services</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-segment">
+        <p class="footer-title">Nexoth Physiotherapy &amp; Wellness</p>
+        <p>Plot 12, Wellness Avenue</p>
+        <p>Kampala, Central, Uganda</p>
+        <p>info@nexothwellness.org</p>
+        <p>(+256) 772-987654</p>
+      </div>
+      <div class="footer-segment">
+        <p class="footer-title">Quick Links</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book Appointment</a></li>
+          <li><a href="attributions.html">Attributions</a></li>
+        </ul>
+      </div>
+      <div class="footer-segment">
+        <p class="footer-title">Operating Hours</p>
+        <p>Mon–Fri: 7:00 AM – 8:00 PM</p>
+        <p>Saturday: 8:00 AM – 4:00 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+      <div class="footer-segment assignment-metadata">
+        <p>WDD231 Final Project</p>
+        <p>BWIRE MOSES</p>
+        <p>&copy; <span id="currentyear"></span> Nexoth Physiotherapy</p>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Sports Injury Rehabilitation",
+    "description": "Targeted programs to help athletes and active individuals recover from sprains, strains, and overuse injuries while preventing future setbacks.",
+    "duration": "45 minutes",
+    "price": "$75",
+    "icon": "🏃"
+  },
+  {
+    "name": "Post-Surgical Recovery",
+    "description": "Guided rehabilitation after joint replacement, ligament repair, or spinal surgery to restore strength, mobility, and confidence.",
+    "duration": "60 minutes",
+    "price": "$95",
+    "icon": "🩹"
+  },
+  {
+    "name": "Chronic Pain Management",
+    "description": "Evidence-based treatment for persistent back, neck, and joint pain using manual therapy, exercise, and lifestyle coaching.",
+    "duration": "45 minutes",
+    "price": "$80",
+    "icon": "💆"
+  },
+  {
+    "name": "Manual Therapy & Mobilization",
+    "description": "Hands-on techniques to reduce stiffness, improve joint movement, and release tight muscles for faster pain relief.",
+    "duration": "40 minutes",
+    "price": "$70",
+    "icon": "🖐️"
+  },
+  {
+    "name": "Pre & Post-Natal Wellness",
+    "description": "Safe, supportive exercise and education to maintain strength, manage discomfort, and recover after childbirth.",
+    "duration": "50 minutes",
+    "price": "$85",
+    "icon": "🤰"
+  },
+  {
+    "name": "Balance & Fall Prevention",
+    "description": "Personalized balance training for older adults and neurological conditions to improve stability and reduce fall risk.",
+    "duration": "30 minutes",
+    "price": "$60",
+    "icon": "🧘"
+  }
+]
+

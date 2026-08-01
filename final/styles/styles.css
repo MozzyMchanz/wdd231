@@ -1,0 +1,645 @@
+/* ==========================================================================
+   Nexoth Physiotherapy & Wellness Portal
+   Stylesheet following the project site plan color schema & typography
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Variables & Color Schema
+   -------------------------------------------------------------------------- */
+:root {
+  --primary-color: #1E3A8A;   /* Deep Slate Blue - headers & primary CTAs */
+  --secondary-color: #0D9488; /* Teal Accent - borders & hovers */
+  --bg-color: #F8FAFC;        /* Light background */
+  --card-bg: #FFFFFF;         /* Card background */
+  --text-color: #1F2937;      /* Charcoal text */
+  --text-muted: #64748B;      /* Muted text */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.12);
+  --radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Base & Reset
+   -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.15rem; }
+
+p { margin-bottom: 0.75rem; }
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #16306e;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Header & Navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-radius: 50%;
+}
+
+.site-title {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-menu a {
+  display: block;
+  color: #FFFFFF;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background-color: var(--secondary-color);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: #FFFFFF;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #E2E8F0;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .btn-primary {
+  background-color: #FFFFFF;
+  color: var(--primary-color);
+}
+
+.hero .btn-primary:hover {
+  background-color: #E2E8F0;
+}
+
+.hero .btn-secondary {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.hero .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Page Hero (inner pages)
+   -------------------------------------------------------------------------- */
+.page-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.page-hero h1 {
+  color: #FFFFFF;
+  font-size: 2.2rem;
+}
+
+.page-hero p {
+  color: #E2E8F0;
+  max-width: 640px;
+  margin: 0.5rem auto 0;
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+
+.section-actions {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Services Grid & Cards
+   -------------------------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary-color);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+}
+
+.service-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #E2E8F0;
+  font-size: 0.95rem;
+}
+
+.service-price {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+/* --------------------------------------------------------------------------
+   Why Choose Us
+   -------------------------------------------------------------------------- */
+.why-us {
+  background-color: var(--card-bg);
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+  max-width: 100%;
+}
+
+.why-us .section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background-color: var(--bg-color);
+}
+
+.why-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.why-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Booking Form
+   -------------------------------------------------------------------------- */
+.booking-section {
+  max-width: 720px;
+}
+
+.booking-section form {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.booking-section label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.booking-section input,
+.booking-section select,
+.booking-section textarea {
+  padding: 0.7rem;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: var(--body-font);
+  background-color: #FFFFFF;
+}
+
+.booking-section input:focus,
+.booking-section select:focus,
+.booking-section textarea:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 1px;
+}
+
+.booking-section input:required,
+.booking-section select:required {
+  border-left: 4px solid var(--primary-color);
+}
+
+.submit-btn {
+  align-self: flex-start;
+}
+
+/* --------------------------------------------------------------------------
+   Booking Success Summary
+   -------------------------------------------------------------------------- */
+.success-hero .success-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.booking-summary {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.summary-value {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Attributions
+   -------------------------------------------------------------------------- */
+.attribution-list {
+  max-width: 860px;
+}
+
+.attribution-item {
+  background-color: var(--card-bg);
+  border: 1px solid #E2E8F0;
+  border-left: 6px solid var(--secondary-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.attribution-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.attribution-item code {
+  background-color: var(--bg-color);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   Loading / Error Messages
+   -------------------------------------------------------------------------- */
+.loading-message,
+.error-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem;
+}
+
+.error-message {
+  color: #B91C1C;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.footer-title {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  color: #FFFFFF;
+}
+
+.site-footer p {
+  margin-bottom: 0.35rem;
+  color: #E2E8F0;
+}
+
+.site-footer ul {
+  list-style: none;
+}
+
+.site-footer a {
+  color: #E2E8F0;
+}
+
+.site-footer a:hover {
+  color: #99F6E4;
+}
+
+.assignment-metadata {
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   Animations
+   -------------------------------------------------------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Styles
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  h1 { font-size: 2.4rem; }
+  .hero h1 { font-size: 3rem; }
+}
+
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: block;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 0.5rem;
+  }
+
+  .nav-menu a {
+    padding: 0.75rem 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .summary-value {
+    text-align: left;
+  }
+}
+
