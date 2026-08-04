@@ -1,79 +1,68 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Hidden timestamp field (booking.html)
-  const timestampInput = document.getElementById("timestamp");
-  if (timestampInput) {
-    timestampInput.value = new Date().toISOString();
-  }
+// booking.js — Booking form behavior, service dropdown, and success summary
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceSelect = document.getElementById('service-select');
+  if (serviceSelect) populateServices(serviceSelect);
 
-  // Populate the service dropdown from services.json (booking.html)
-  const serviceSelect = document.getElementById("service");
-  if (serviceSelect) {
-    loadServiceOptions(serviceSelect);
-  }
-
-  // Prevent past dates in the date picker
-  const dateInput = document.getElementById("date");
+  const dateInput = document.getElementById('appointment-date');
   if (dateInput) {
-    dateInput.min = new Date().toISOString().split("T")[0];
+    dateInput.min = new Date().toISOString().split('T')[0];
   }
 
-  // Render booking confirmation (booking-success.html)
-  const summaryContainer = document.getElementById("booking-summary");
-  if (summaryContainer) {
-    renderBookingSummary(summaryContainer);
+  const bookingForm = document.getElementById('booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', () => {
+      // Persist user selections in Local Storage before GET submission
+      const name = document.getElementById('fullname').value;
+      const service = document.getElementById('service-select').value;
+      localStorage.setItem('lastBookingName', name);
+      localStorage.setItem('lastBookingService', service);
+    });
   }
+
+  const summaryContainer = document.getElementById('booking-summary');
+  if (summaryContainer) renderBookingSummary(summaryContainer);
 });
 
-async function loadServiceOptions(serviceSelect) {
+async function populateServices(select) {
   try {
-    const response = await fetch("data/services.json");
-    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+    const response = await fetch('data/services.json');
+    if (!response.ok) throw new Error('Network response failed');
     const services = await response.json();
 
     services.forEach((service) => {
-      const option = document.createElement("option");
+      const option = document.createElement('option');
       option.value = service.name;
-      option.textContent = `${service.name} — ${service.price}`;
-      serviceSelect.appendChild(option);
+      option.textContent = `${service.name} — ${service.cost}`;
+      select.appendChild(option);
     });
 
-    // Pre-select a service passed via query string (e.g., from services.html)
+    // Pre-select a service passed via the query string (e.g., from services.html)
     const params = new URLSearchParams(window.location.search);
-    const requestedService = params.get("service");
-    if (requestedService) {
-      serviceSelect.value = requestedService;
-    }
+    const requested = params.get('service');
+    if (requested) select.value = requested;
   } catch (error) {
-    console.error("Error loading service options:", error);
+    console.error('Error loading service options:', error);
   }
 }
 
 function renderBookingSummary(container) {
   const params = new URLSearchParams(window.location.search);
 
-  const firstName = params.get("first-name") || "";
-  const lastName = params.get("last-name") || "";
-  const fullName = `${firstName} ${lastName}`.trim() || "Patient";
-  const service = params.get("service") || "Not specified";
-  const date = formatDate(params.get("date"));
-  const time = params.get("time") || "Not specified";
-
-  // Generate a simple booking reference from the timestamp when available
-  const timestamp = params.get("timestamp");
-  let bookingRef = "NXP-000000";
-  if (timestamp) {
-    const digits = timestamp.replace(/\D/g, "").slice(-6);
-    bookingRef = `NXP-${digits}`;
-  }
+  const fullname = params.get('fullname') || 'Not provided';
+  const email = params.get('email') || 'Not provided';
+  const service = params.get('service') || 'Not provided';
+  const date = formatDate(params.get('date'));
 
   container.innerHTML = `
+    <h3>Thank you, ${fullname}!</h3>
+    <p>Your booking request has been received. Our care team will confirm your appointment shortly.</p>
     <div class="summary-row">
-      <span class="summary-label">Booking Reference</span>
-      <span class="summary-value">${bookingRef}</span>
+      <span class="summary-label">Full Name</span>
+      <span class="summary-value">${fullname}</span>
     </div>
     <div class="summary-row">
-      <span class="summary-label">Patient Name</span>
-      <span class="summary-value">${fullName}</span>
+      <span class="summary-label">Email Address</span>
+      <span class="summary-value">${email}</span>
     </div>
     <div class="summary-row">
       <span class="summary-label">Service</span>
@@ -83,22 +72,17 @@ function renderBookingSummary(container) {
       <span class="summary-label">Preferred Date</span>
       <span class="summary-value">${date}</span>
     </div>
-    <div class="summary-row">
-      <span class="summary-label">Preferred Time</span>
-      <span class="summary-value">${time}</span>
-    </div>
   `;
 }
 
 function formatDate(dateString) {
-  if (!dateString || dateString === "Not specified") return "Not specified";
+  if (!dateString) return 'Not provided';
   const date = new Date(`${dateString}T00:00:00`);
   if (Number.isNaN(date.getTime())) return dateString;
-  return date.toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+  return date.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   });
 }
-

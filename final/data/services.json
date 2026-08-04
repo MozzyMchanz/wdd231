@@ -1,45 +1,17 @@
 [
-  {
-    "name": "Sports Injury Rehabilitation",
-    "description": "Targeted programs to help athletes and active individuals recover from sprains, strains, and overuse injuries while preventing future setbacks.",
-    "duration": "45 minutes",
-    "price": "$75",
-    "icon": "🏃"
-  },
-  {
-    "name": "Post-Surgical Recovery",
-    "description": "Guided rehabilitation after joint replacement, ligament repair, or spinal surgery to restore strength, mobility, and confidence.",
-    "duration": "60 minutes",
-    "price": "$95",
-    "icon": "🩹"
-  },
-  {
-    "name": "Chronic Pain Management",
-    "description": "Evidence-based treatment for persistent back, neck, and joint pain using manual therapy, exercise, and lifestyle coaching.",
-    "duration": "45 minutes",
-    "price": "$80",
-    "icon": "💆"
-  },
-  {
-    "name": "Manual Therapy & Mobilization",
-    "description": "Hands-on techniques to reduce stiffness, improve joint movement, and release tight muscles for faster pain relief.",
-    "duration": "40 minutes",
-    "price": "$70",
-    "icon": "🖐️"
-  },
-  {
-    "name": "Pre & Post-Natal Wellness",
-    "description": "Safe, supportive exercise and education to maintain strength, manage discomfort, and recover after childbirth.",
-    "duration": "50 minutes",
-    "price": "$85",
-    "icon": "🤰"
-  },
-  {
-    "name": "Balance & Fall Prevention",
-    "description": "Personalized balance training for older adults and neurological conditions to improve stability and reduce fall risk.",
-    "duration": "30 minutes",
-    "price": "$60",
-    "icon": "🧘"
-  }
+  { "id": 1, "name": "Sports Injury Rehab", "category": "Rehab", "duration": "60 mins", "cost": "$90", "description": "Targeted therapy to recover from athletic injuries and restore peak performance." },
+  { "id": 2, "name": "Post-Surgical Recovery", "category": "Rehab", "duration": "45 mins", "cost": "$100", "description": "Guided post-op protocols to rebuild range of motion safely." },
+  { "id": 3, "name": "Chronic Pain Management", "category": "Therapy", "duration": "60 mins", "cost": "$85", "description": "Comprehensive strategies to alleviate persistent joint and muscle pain." },
+  { "id": 4, "name": "Spinal Realignment Therapy", "category": "Therapy", "duration": "45 mins", "cost": "$95", "description": "Manual adjustments and posture retraining for spine health." },
+  { "id": 5, "name": "Ergonomic Assessment", "category": "Wellness", "duration": "30 mins", "cost": "$60", "description": "Evaluation of workplace setups to prevent repetitive stress injuries." },
+  { "id": 6, "name": "Pediatric Physiotherapy", "category": "Rehab", "duration": "45 mins", "cost": "$80", "description": "Specialized movement therapies tailored for children and youth." },
+  { "id": 7, "name": "Geriatric Mobility Care", "category": "Therapy", "duration": "60 mins", "cost": "$85", "description": "Balance and strength enhancement program tailored for seniors." },
+  { "id": 8, "name": "Dry Needling Therapy", "category": "Therapy", "duration": "30 mins", "cost": "$70", "description": "Targeted myofascial trigger point relief using sterile needles." },
+  { "id": 9, "name": "Neurological Rehabilitation", "category": "Rehab", "duration": "60 mins", "cost": "$110", "description": "Care plans for stroke, Parkinson's, and nerve damage recovery." },
+  { "id": 10, "name": "Cardiopulmonary Rehab", "category": "Rehab", "duration": "45 mins", "cost": "$95", "description": "Monitored exercise regimens for heart and lung endurance." },
+  { "id": 11, "name": "Hydrotherapy Session", "category": "Wellness", "duration": "45 mins", "cost": "$75", "description": "Water-based low-impact resistance training and rehabilitation." },
+  { "id": 12, "name": "Vestibular Rehabilitation", "category": "Therapy", "duration": "30 mins", "cost": "$80", "description": "Specialized exercises to cure dizziness and vertigo disorders." },
+  { "id": 13, "name": "Kinesio Taping Application", "category": "Wellness", "duration": "20 mins", "cost": "$40", "description": "Supportive elastic taping for muscle stabilization during sports." },
+  { "id": 14, "name": "Trigger Point Massage", "category": "Wellness", "duration": "45 mins", "cost": "$75", "description": "Deep tissue focus to relieve localized muscular knots." },
+  { "id": 15, "name": "Postural Correction Care", "category": "Wellness", "duration": "45 mins", "cost": "$70", "description": "Exercise plans designed to fix slouching and forward-head posture." }
 ]
-

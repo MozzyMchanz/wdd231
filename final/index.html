@@ -1,46 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexoth Physiotherapy &amp; Wellness Portal | Home</title>
+  <title>Nexoth Physiotherapy & Wellness Portal | Home</title>
   <meta name="description" content="Nexoth Physiotherapy & Wellness Portal - personalized physiotherapy care for sports injuries, post-surgical recovery, and chronic pain management.">
   <meta name="author" content="BWIRE MOSES">
 
-  <!-- Open Graph / Social Sharing -->
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Open Graph Protocol -->
   <meta property="og:title" content="Nexoth Physiotherapy & Wellness Portal">
-  <meta property="og:description" content="Reclaim your movement and health with personalized physiotherapy care.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Reclaim your movement and health with personalized physiotherapy care programs at Nexoth.">
+  <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/final/images/og-share.jpg">
   <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/final/index.html">
-
-  <!-- Favicon -->
-  <link rel="icon" href="../project/images/favicon.ico">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles/styles.css">
-
-  <!-- Scripts -->
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/services.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <span class="logo-mark" aria-hidden="true">N</span>
-        <span class="site-title">Nexoth Physiotherapy</span>
-      </div>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
-      <nav id="nav-menu" class="nav-menu" aria-label="Primary">
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-text">Nexoth Wellness</a>
+      <button id="menu-button" aria-label="Toggle Navigation">&#9776;</button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Book Appointment</a></li>
+          <li><a href="booking.html">Booking</a></li>
           <li><a href="attributions.html">Attributions</a></li>
         </ul>
       </nav>
@@ -48,85 +34,32 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <h1>Reclaim Your Movement &amp; Health</h1>
-        <p>Personalized physiotherapy and wellness care designed for your active lifestyle.</p>
-        <div class="hero-actions">
-          <a href="booking.html" class="btn btn-primary">Book an Appointment</a>
-          <a href="services.html" class="btn btn-secondary">Explore Services</a>
-        </div>
+      <h2>Restoring Movement, Enhancing Life</h2>
+      <p>Evidence-based physiotherapy tailored to your individual recovery goals.</p>
+      <a href="booking.html" class="cta-button">Book an Appointment</a>
+    </section>
+
+    <section>
+      <h2>Featured Care Programs</h2>
+      <div class="grid-container" id="featured-services">
+        <!-- Dynamically injected via JavaScript -->
       </div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="section services-preview">
-      <h2>Our Services</h2>
-      <p class="section-intro">Specialized care programs to help you move better, feel stronger, and live pain-free.</p>
-      <div id="services-container" class="services-grid">
-        <!-- Populated dynamically by services.js -->
-      </div>
-      <div class="section-actions">
-        <a href="services.html" class="btn btn-primary">View All Services</a>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section why-us">
-      <h2>Why Choose Nexoth?</h2>
-      <div class="why-grid">
-        <article class="why-card">
-          <span class="why-icon" aria-hidden="true">🎓</span>
-          <h3>Certified Specialists</h3>
-          <p>Licensed physiotherapists with advanced training in sports medicine and rehabilitation.</p>
-        </article>
-        <article class="why-card">
-          <span class="why-icon" aria-hidden="true">📋</span>
-          <h3>Personalized Plans</h3>
-          <p>Every recovery journey is unique. We build tailored treatment programs around your goals.</p>
-        </article>
-        <article class="why-card">
-          <span class="why-icon" aria-hidden="true">⏱</span>
-          <h3>Flexible Scheduling</h3>
-          <p>Early morning, evening, and weekend appointments to fit your busy routine.</p>
-        </article>
-      </div>
-    </section>
+    <dialog id="info-modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+      <div id="modal-content"></div>
+      <button class="close-modal" id="close-modal-btn">Close</button>
+    </dialog>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-segment">
-        <p class="footer-title">Nexoth Physiotherapy &amp; Wellness</p>
-        <p>Plot 12, Wellness Avenue</p>
-        <p>Kampala, Central, Uganda</p>
-        <p>info@nexothwellness.org</p>
-        <p>(+256) 772-987654</p>
-      </div>
-      <div class="footer-segment">
-        <p class="footer-title">Quick Links</p>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Book Appointment</a></li>
-          <li><a href="attributions.html">Attributions</a></li>
-        </ul>
-      </div>
-      <div class="footer-segment">
-        <p class="footer-title">Operating Hours</p>
-        <p>Mon–Fri: 7:00 AM – 8:00 PM</p>
-        <p>Saturday: 8:00 AM – 4:00 PM</p>
-        <p>Sunday: Closed</p>
-      </div>
-      <div class="footer-segment assignment-metadata">
-        <p>WDD231 Final Project</p>
-        <p>BWIRE MOSES</p>
-        <p>&copy; <span id="currentyear"></span> Nexoth Physiotherapy</p>
-        <p id="lastModified"></p>
-      </div>
-    </div>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Nexoth Physiotherapy | BWIRE MOSES | WDD 231</p>
+    <p id="lastModified"></p>
+    <p><a href="attributions.html">Attributions</a></p>
   </footer>
+
+  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/services.js" type="module"></script>
 </body>
 </html>
-

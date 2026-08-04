@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Responsive Overrides for Desktop Viewports (min-width: 600px / 37.5em)
+   ========================================================================== */
+@media screen and (min-width: 37.5em) {
+  .header-container {
+    flex-wrap: nowrap;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  nav {
+    display: block !important;
+    width: auto;
+    background: none;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .two-column {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}

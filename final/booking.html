@@ -1,46 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexoth Physiotherapy &amp; Wellness Portal | Book Appointment</title>
-  <meta name="description" content="Book a physiotherapy appointment at Nexoth. Choose your service, date, and preferred time.">
+  <title>Nexoth Physiotherapy & Wellness Portal | Book Appointment</title>
+  <meta name="description" content="Book a physiotherapy appointment at Nexoth. Choose your service, date, and preferred time online easily.">
   <meta name="author" content="BWIRE MOSES">
 
-  <!-- Open Graph / Social Sharing -->
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
   <meta property="og:title" content="Nexoth Physiotherapy | Book Appointment">
-  <meta property="og:description" content="Schedule your physiotherapy appointment online.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Schedule your personalized physiotherapy appointment online with Nexoth.">
+  <meta property="og:image" content="https://mozzymchanz.github.io/wdd231/final/images/og-share.jpg">
   <meta property="og:url" content="https://mozzymchanz.github.io/wdd231/final/booking.html">
-
-  <!-- Favicon -->
-  <link rel="icon" href="../project/images/favicon.ico">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles/styles.css">
-
-  <!-- Scripts -->
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/booking.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo">
-        <span class="logo-mark" aria-hidden="true">N</span>
-        <span class="site-title">Nexoth Physiotherapy</span>
-      </div>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
-      <nav id="nav-menu" class="nav-menu" aria-label="Primary">
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-text">Nexoth Wellness</a>
+      <button id="menu-button" aria-label="Toggle Navigation">&#9776;</button>
+      <nav id="primary-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html" class="active">Book Appointment</a></li>
+          <li><a href="booking.html" class="active">Booking</a></li>
           <li><a href="attributions.html">Attributions</a></li>
         </ul>
       </nav>
@@ -48,98 +33,42 @@
   </header>
 
   <main>
-    <section class="page-hero">
-      <h1>Book an Appointment</h1>
-      <p>Complete the form below and our care team will confirm your visit shortly.</p>
-    </section>
+    <h2>Book Your Appointment</h2>
+    <form id="booking-form" class="card" method="get" action="booking-success.html">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" autocomplete="given-name" title="Please enter your full name." required>
+      </div>
 
-    <section class="section booking-section">
-      <form id="booking-form" method="get" action="booking-success.html">
-        <label for="first-name">First Name:
-          <input type="text" id="first-name" name="first-name" autocomplete="given-name" title="Please enter your first name." required>
-        </label>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="example@domain.com" title="Please enter a valid email address." required>
+      </div>
 
-        <label for="last-name">Last Name:
-          <input type="text" id="last-name" name="last-name" autocomplete="family-name" title="Please enter your last name." required>
-        </label>
+      <div class="form-group">
+        <label for="service-select">Select Service</label>
+        <select id="service-select" name="service" title="Select a service." required>
+          <option value="" disabled selected>-- Choose a Service --</option>
+          <!-- Options populated from data/services.json via booking.js -->
+        </select>
+      </div>
 
-        <label for="email">Email Address:
-          <input type="email" id="email" name="email" placeholder="example@domain.com" autocomplete="email" title="Please enter a valid email address." required>
-        </label>
+      <div class="form-group">
+        <label for="appointment-date">Preferred Date</label>
+        <input type="date" id="appointment-date" name="date" title="Choose your preferred appointment date." required>
+      </div>
 
-        <label for="phone">Mobile Phone:
-          <input type="tel" id="phone" name="phone" autocomplete="tel" title="Please enter your phone number." required>
-        </label>
-
-        <label for="service">Service:
-          <select id="service" name="service" title="Select a service." required>
-            <option value="" disabled selected>Select a service…</option>
-            <!-- Options populated from data/services.json -->
-          </select>
-        </label>
-
-        <label for="date">Preferred Date:
-          <input type="date" id="date" name="date" title="Choose your preferred appointment date." required>
-        </label>
-
-        <label for="time">Preferred Time:
-          <select id="time" name="time" title="Choose a preferred appointment time." required>
-            <option value="" disabled selected>Select a time…</option>
-            <option value="08:00">8:00 AM</option>
-            <option value="09:00">9:00 AM</option>
-            <option value="10:00">10:00 AM</option>
-            <option value="11:00">11:00 AM</option>
-            <option value="14:00">2:00 PM</option>
-            <option value="15:00">3:00 PM</option>
-            <option value="16:00">4:00 PM</option>
-            <option value="17:00">5:00 PM</option>
-          </select>
-        </label>
-
-        <label for="notes">Additional Notes:
-          <textarea id="notes" name="notes" rows="4" title="Optional details about your condition or questions."></textarea>
-        </label>
-
-        <!-- Hidden timestamp field -->
-        <input type="hidden" id="timestamp" name="timestamp">
-
-        <button type="submit" class="btn btn-primary submit-btn">Request Appointment</button>
-      </form>
-    </section>
+      <button type="submit" class="cta-button">Confirm Booking</button>
+    </form>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-segment">
-        <p class="footer-title">Nexoth Physiotherapy &amp; Wellness</p>
-        <p>Plot 12, Wellness Avenue</p>
-        <p>Kampala, Central, Uganda</p>
-        <p>info@nexothwellness.org</p>
-        <p>(+256) 772-987654</p>
-      </div>
-      <div class="footer-segment">
-        <p class="footer-title">Quick Links</p>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Book Appointment</a></li>
-          <li><a href="attributions.html">Attributions</a></li>
-        </ul>
-      </div>
-      <div class="footer-segment">
-        <p class="footer-title">Operating Hours</p>
-        <p>Mon–Fri: 7:00 AM – 8:00 PM</p>
-        <p>Saturday: 8:00 AM – 4:00 PM</p>
-        <p>Sunday: Closed</p>
-      </div>
-      <div class="footer-segment assignment-metadata">
-        <p>WDD231 Final Project</p>
-        <p>BWIRE MOSES</p>
-        <p>&copy; <span id="currentyear"></span> Nexoth Physiotherapy</p>
-        <p id="lastModified"></p>
-      </div>
-    </div>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Nexoth Physiotherapy | BWIRE MOSES | WDD 231</p>
+    <p id="lastModified"></p>
+    <p><a href="attributions.html">Attributions</a></p>
   </footer>
+
+  <script src="scripts/main.js" type="module"></script>
+  <script src="scripts/booking.js" type="module"></script>
 </body>
 </html>
-

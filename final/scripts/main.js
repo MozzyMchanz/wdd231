@@ -1,25 +1,19 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Footer: current year
-  const yearSpan = document.getElementById("currentyear");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+// Mobile Menu Navigation Toggle
+const menuButton = document.getElementById('menu-button');
+const primaryNav = document.getElementById('primary-nav');
 
-  // Footer: last modified date
-  const lastMod = document.getElementById("lastModified");
-  if (lastMod) {
-    lastMod.textContent = `Last Modification: ${document.lastModified}`;
-  }
+if (menuButton && primaryNav) {
+  menuButton.addEventListener('click', () => {
+    primaryNav.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', primaryNav.classList.contains('open'));
+  });
+}
 
-  // Mobile navigation toggle
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navMenu.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.textContent = isOpen ? "✕" : "☰";
-    });
-  }
-});
+// Dynamic Footer Date Details
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
 
+// Local Storage: persist a visit counter to demonstrate client-side state
+let visitCount = Number(localStorage.getItem('nexothVisitCount')) || 0;
+visitCount += 1;
+localStorage.setItem('nexothVisitCount', visitCount);
